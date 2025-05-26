@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Your Name - Web Developer Portfolio</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -12,102 +13,201 @@
   <header>
     <div class="header-top">
       <div class="logo">
-        <h1>Prince Luxe</h1>
+        <h1>Your Name</h1>
+        <p class="tagline">Web Developer</p>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search products..." />
-        <button>Search</button>
-      </div>
-      <div class="user-actions">
-        <span>Login</span>
-        <span class="cart-count">Cart (0)</span>
+      <div class="contact-info">
+        <span>📧 your.email@example.com</span>
+        <span>🔗 GitHub</span>
+        <span>💼 LinkedIn</span>
       </div>
     </div>
     <nav>
-      <a class="links" href="#">
+      <a class="links" href="#home">
         <span class="icon home-icon"></span>
         Home
       </a>
-      <a class="links" href="#">
-        <span class="icon category-icon"></span>
-        Category
+      <a class="links" href="#about">
+        <span class="icon about-icon"></span>
+        About
       </a>
-      <a class="links" href="#">
-        <span class="icon cart-icon"></span>
-        Cart
+      <a class="links" href="#projects">
+        <span class="icon projects-icon"></span>
+        Projects
       </a>
-      <a class="links" href="#">
-        <span class="icon wishlist-icon"></span>
-        Wishlist
+      <a class="links" href="#skills">
+        <span class="icon skills-icon"></span>
+        Skills
+      </a>
+      <a class="links" href="#contact">
+        <span class="icon contact-icon"></span>
+        Contact
       </a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="hero-content">
-        <h2>Welcome to Prince Luxe</h2>
-        <p>Discover amazing products at best prices</p>
-        <button class="cta-button">Shop Now</button>
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm a passionate web developer creating amazing digital experiences</p>
+        <button class="cta-button">View My Work</button>
       </div>
     </section>
 
-    <section class="featured-categories">
-      <h3>Featured Categories</h3>
-      <div class="categories-grid">
-        <div class="category-card">
-          <h4>Electronics</h4>
-          <p>Latest gadgets and tech</p>
+    <section id="about" class="about-section">
+      <h3>About Me</h3>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a dedicated web developer with experience in creating responsive, user-friendly websites and web applications. I enjoy solving complex problems and bringing creative ideas to life through code.</p>
+          <p>With expertise in modern web technologies, I focus on creating clean, efficient, and scalable solutions that deliver exceptional user experiences.</p>
         </div>
-        <div class="category-card">
-          <h4>Fashion</h4>
-          <p>Trendy clothing and accessories</p>
-        </div>
-        <div class="category-card">
-          <h4>Home & Garden</h4>
-          <p>Everything for your home</p>
-        </div>
-        <div class="category-card">
-          <h4>Sports</h4>
-          <p>Gear for active lifestyle</p>
+        <div class="about-stats">
+          <div class="stat">
+            <h4>50+</h4>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat">
+            <h4>3+</h4>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat">
+            <h4>100%</h4>
+            <p>Client Satisfaction</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="featured-products">
-      <h3>Featured Products</h3>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-image">
+    <section id="skills" class="skills-section">
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h4>Frontend</h4>
+          <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h4>Backend</h4>
+          <p>Node.js, Python, PHP, Express.js</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h4>Database</h4>
+          <p>MySQL, MongoDB, PostgreSQL</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h4>Tools</h4>
+          <p>Git, Docker, VS Code, Figma</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h3>Featured Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="placeholder-image">🛒</div>
+          </div>
+          <h4>E-Commerce Platform</h4>
+          <p>Full-stack e-commerce solution with React and Node.js</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <button class="btn-demo">Live Demo</button>
+            <button class="btn-code">View Code</button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
             <div class="placeholder-image">📱</div>
           </div>
-          <h4>Iphone 69 Pro Max</h4>
-          <p class="price">$69</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image">
-            <div class="placeholder-image">👕</div>
+          <h4>Mobile App Dashboard</h4>
+          <p>Responsive dashboard for mobile application analytics</p>
+          <div class="project-tech">
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">Chart.js</span>
+            <span class="tech-tag">CSS3</span>
           </div>
-          <h4>Premium T-Shirt</h4>
-          <p class="price">$69</p>
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image">
-            <div class="placeholder-image">🎧</div>
+          <div class="project-links">
+            <button class="btn-demo">Live Demo</button>
+            <button class="btn-code">View Code</button>
           </div>
-          <h4>Wireless Headphones</h4>
-          <p class="price">$69</p>
-          <button class="add-to-cart">Add to Cart</button>
         </div>
-        <div class="product-card">
-          <div class="product-image">
-            <div class="placeholder-image">⌚</div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="placeholder-image">🎨</div>
           </div>
-          <h4>Smart Watch</h4>
-          <p class="price">$69</p>
-          <button class="add-to-cart">Add to Cart</button>
+          <h4>Portfolio Website</h4>
+          <p>Creative portfolio website with smooth animations</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <button class="btn-demo">Live Demo</button>
+            <button class="btn-code">View Code</button>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="placeholder-image">🔧</div>
+          </div>
+          <h4>Task Management Tool</h4>
+          <p>Collaborative task management with real-time updates</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Socket.IO</span>
+            <span class="tech-tag">Express</span>
+          </div>
+          <div class="project-links">
+            <button class="btn-demo">Live Demo</button>
+            <button class="btn-code">View Code</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h3>Get In Touch</h3>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h4>Email</h4>
+              <p>your.email@example.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Location</h4>
+              <p>Your City, Country</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -116,32 +216,32 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h4>Customer Service</h4>
+        <h4>Quick Links</h4>
         <ul>
-          <li>Contact Us</li>
-          <li>Shipping Info</li>
-          <li>Returns</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>About</h4>
+        <h4>Services</h4>
         <ul>
-          <li>About Us</li>
-          <li>Careers</li>
-          <li>Privacy Policy</li>
+          <li>Web Development</li>
+          <li>Frontend Design</li>
+          <li>Backend Development</li>
         </ul>
       </div>
       <div class="footer-section">
-        <h4>Follow Us</h4>
+        <h4>Connect</h4>
         <ul>
-          <li>Facebook</li>
+          <li>GitHub</li>
+          <li>LinkedIn</li>
           <li>Twitter</li>
-          <li>Instagram</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2069 Prince luxe. All rights reserved.</p>
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
     </div>
   </footer>
   
