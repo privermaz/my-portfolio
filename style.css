@@ -10,24 +10,18 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
-  background: 
-    linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 50%, rgba(15, 52, 96, 0.8) 100%),
-    url('https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=6835d809&is=68348689&hm=29b4f45c3364421f038f2d9629003e4ef1a6e4da3a6d33164f21d1cec3837d1a&') center/cover no-repeat fixed;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
 .portfolio-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 25px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 50px rgba(255, 215, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 1;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -105,41 +99,18 @@ h1 {
 
 .about-card, .social-card, .skills-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
   border-radius: 18px;
   padding: 25px;
   margin: 25px 0;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 20px rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
   position: relative;
-  overflow: hidden;
-}
-
-.about-card::before, .social-card::before, .skills-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.about-card:hover::before, .social-card:hover::before, .skills-card:hover::before {
-  left: 100%;
 }
 
 .about-card:hover, .social-card:hover, .skills-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 0 30px rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 .card-header {
@@ -229,13 +200,12 @@ h1 {
 
 .social-icon {
   position: relative;
-  font-size: 20px;
-  padding: 15px;
-  border-radius: 15px;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -303,21 +273,7 @@ h1 {
   position: relative;
 }
 
-.progress-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
 
 /* Responsive Design */
 @media screen and (max-width: 480px) {
@@ -348,16 +304,3 @@ h1 {
   }
 }
 
-/* Subtle overlay pattern */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g"><stop offset="20%" stop-color="%23ffffff" stop-opacity="0.02"/><stop offset="50%" stop-color="%23ffffff" stop-opacity="0.01"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="100" height="100" fill="url(%23g)"/></svg>') repeat;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 0;
-}
