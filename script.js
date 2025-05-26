@@ -1,39 +1,26 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Simple card fade-in
-    const cards = document.querySelectorAll('.about-card, .social-card, .skills-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        
-        setTimeout(() => {
-            card.style.transition = 'opacity 0.4s ease';
-            card.style.opacity = '1';
-        }, index * 100 + 200);
-    });
+    // Website opening animation
+    const container = document.querySelector('.portfolio-container');
+    container.style.opacity = '0';
+    container.style.transform = 'scale(0.8) translateY(20px)';
+    container.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
 
-    // Simple profile image fade-in
-    const profileImage = document.querySelector('.profile-image img');
-    if (profileImage) {
-        profileImage.style.opacity = '0';
-        profileImage.style.transition = 'opacity 0.5s ease';
-        
-        setTimeout(() => {
-            profileImage.style.opacity = '1';
-        }, 100);
-    }
+    // Start opening animation
+    setTimeout(() => {
+        container.style.opacity = '1';
+        container.style.transform = 'scale(1) translateY(0)';
+    }, 100);
 
-    // Skill items animation
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        
+    // Simple staggered fade-in for all animated elements
+    const elements = document.querySelectorAll('.about-card, .social-card, .skills-card, .skill-item');
+    elements.forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(10px)';
+        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
         setTimeout(() => {
-            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, index * 100 + 500);
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, 200 + i * 50);
     });
 });
-
-
