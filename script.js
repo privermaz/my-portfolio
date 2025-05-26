@@ -1,20 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Simple progress bar animation
-    const progressBars = document.querySelectorAll('.progress-fill');
-    
-    const animateProgressBars = () => {
-        progressBars.forEach((bar, index) => {
-            const width = bar.style.width;
-            bar.style.width = '0%';
-            
-            setTimeout(() => {
-                bar.style.transition = 'width 0.8s ease';
-                bar.style.width = width;
-            }, index * 100 + 300);
-        });
-    };
-
     // Simple card fade-in
     const cards = document.querySelectorAll('.about-card, .social-card, .skills-card');
     cards.forEach((card, index) => {
@@ -37,8 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
 
-    // Initialize animations
-    setTimeout(animateProgressBars, 500);
+    // Skill items animation
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, index * 100 + 500);
+    });
 });
 
 
