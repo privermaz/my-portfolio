@@ -9,26 +9,141 @@
 </head>
 
 <body>
-  <div>
-     <nav>
-       <a class="links" href="#">
-         <span class="icon home-icon"></span>
-         Home
-       </a>
-       <a class="links" href="#">
-         <span class="icon category-icon"></span>
-         Category
-       </a>
-       <a class="links" href="#">
-         <span class="icon cart-icon"></span>
-         Cart
-       </a>
-       <a class="links" href="#">
-         <span class="icon wishlist-icon"></span>
-         Wishlist
-       </a>
-     </nav>
-  </div>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <h1>ShopEase</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products..." />
+        <button>Search</button>
+      </div>
+      <div class="user-actions">
+        <span>Login</span>
+        <span class="cart-count">Cart (0)</span>
+      </div>
+    </div>
+    <nav>
+      <a class="links" href="#">
+        <span class="icon home-icon"></span>
+        Home
+      </a>
+      <a class="links" href="#">
+        <span class="icon category-icon"></span>
+        Category
+      </a>
+      <a class="links" href="#">
+        <span class="icon cart-icon"></span>
+        Cart
+      </a>
+      <a class="links" href="#">
+        <span class="icon wishlist-icon"></span>
+        Wishlist
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to ShopEase</h2>
+        <p>Discover amazing products at unbeatable prices</p>
+        <button class="cta-button">Shop Now</button>
+      </div>
+    </section>
+
+    <section class="featured-categories">
+      <h3>Featured Categories</h3>
+      <div class="categories-grid">
+        <div class="category-card">
+          <h4>Electronics</h4>
+          <p>Latest gadgets and tech</p>
+        </div>
+        <div class="category-card">
+          <h4>Fashion</h4>
+          <p>Trendy clothing and accessories</p>
+        </div>
+        <div class="category-card">
+          <h4>Home & Garden</h4>
+          <p>Everything for your home</p>
+        </div>
+        <div class="category-card">
+          <h4>Sports</h4>
+          <p>Gear for active lifestyle</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <h3>Featured Products</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <div class="placeholder-image">📱</div>
+          </div>
+          <h4>Smartphone Pro</h4>
+          <p class="price">$699.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <div class="placeholder-image">👕</div>
+          </div>
+          <h4>Premium T-Shirt</h4>
+          <p class="price">$29.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <div class="placeholder-image">🎧</div>
+          </div>
+          <h4>Wireless Headphones</h4>
+          <p class="price">$149.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <div class="placeholder-image">⌚</div>
+          </div>
+          <h4>Smart Watch</h4>
+          <p class="price">$299.99</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li>Contact Us</li>
+          <li>Shipping Info</li>
+          <li>Returns</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>About</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Careers</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </div>
+  </footer>
   
   <script src="script.js"></script>
 </body>
