@@ -8,8 +8,10 @@ nav{
   display:flex;
   align-items:center;
   height:50px;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
   padding:0 10px;
+  min-height:50px;
+  max-height:50px;
   }
 
 .links{
@@ -42,16 +44,17 @@ nav{
   flex-shrink:0;
   }
 
-/* Home icon */
+/* Home icon - improved design */
 .home-icon::before{
   content:'';
   position:absolute;
-  width:16px;
-  height:12px;
+  width:14px;
+  height:10px;
   border:2px solid white;
   border-top:none;
-  top:8px;
-  left:2px;
+  top:9px;
+  left:3px;
+  background:transparent;
   }
 
 .home-icon::after{
@@ -59,11 +62,54 @@ nav{
   position:absolute;
   width:0;
   height:0;
-  border-left:10px solid transparent;
-  border-right:10px solid transparent;
-  border-bottom:8px solid white;
-  top:0;
-  left:0;
+  border-left:9px solid transparent;
+  border-right:9px solid transparent;
+  border-bottom:7px solid white;
+  top:2px;
+  left:1px;
+  }
+
+/* Home door */
+.home-icon{
+  }
+
+.home-icon::before{
+  content:'';
+  position:absolute;
+  width:14px;
+  height:10px;
+  border:2px solid white;
+  border-top:none;
+  top:9px;
+  left:3px;
+  }
+
+.home-icon::after{
+  content:'';
+  position:absolute;
+  width:0;
+  height:0;
+  border-left:9px solid transparent;
+  border-right:9px solid transparent;
+  border-bottom:7px solid white;
+  top:2px;
+  left:1px;
+  }
+
+/* Add door to home */
+.home-icon{
+  }
+
+.home-icon::before{
+  content:'';
+  position:absolute;
+  width:14px;
+  height:10px;
+  border:2px solid white;
+  border-top:none;
+  top:9px;
+  left:3px;
+  box-shadow:inset 3px 0 0 0 white;
   }
 
 /* Category icon */
