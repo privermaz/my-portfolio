@@ -1,102 +1,103 @@
 
-// Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    // Animate progress bars on load
+    const progressBars = document.querySelectorAll('.progress-fill');
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+    const animateProgressBars = () => {
+        progressBars.forEach((bar, index) => {
+            const width = bar.style.width;
+            bar.style.width = '0%';
             
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            setTimeout(() => {
+                bar.style.width = width;
+            }, index * 200 + 500);
         });
-    });
-
-    // Add active class to current navigation item
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a');
-        
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    }
-
-    // Add animation on scroll for project cards
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe project cards and skill cards
-    const cards = document.querySelectorAll('.project-card, .skill-card');
-    cards.forEach(card => {
+    // Animate cards on load
+    const cards = document.querySelectorAll('.about-card, .social-card, .skills-card');
+    cards.forEach((card, index) => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
+        card.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 150 + 300);
     });
 
-    // CTA Button functionality
-    const ctaButton = document.querySelector('.cta-button');
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function() {
-            document.getElementById('projects').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    // Animate profile image
+    const profileImage = document.querySelector('.profile-image img');
+    if (profileImage) {
+        profileImage.style.transform = 'scale(0)';
+        profileImage.style.transition = 'transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        
+        setTimeout(() => {
+            profileImage.style.transform = 'scale(1)';
+        }, 100);
     }
 
-    // Demo and code button functionality
-    const demoButtons = document.querySelectorAll('.btn-demo');
-    const codeButtons = document.querySelectorAll('.btn-code');
-
-    demoButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            alert('Demo link would open here. Replace with actual project URLs.');
+    // Add hover effects to social icons
+    const socialIcons = document.querySelectorAll('.social-icon');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.background = 'rgba(255, 255, 255, 0.2)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.background = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        icon.addEventListener('click', function() {
+            this.style.animation = 'pulse 0.3s ease';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 300);
         });
     });
 
-    codeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            alert('GitHub repository would open here. Replace with actual GitHub URLs.');
+    // Add click effect to skill bars
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const progressFill = this.querySelector('.progress-fill');
+            progressFill.style.animation = 'pulse-glow 0.5s ease';
+            setTimeout(() => {
+                progressFill.style.animation = '';
+            }, 500);
         });
     });
+
+    // Initialize animations
+    setTimeout(animateProgressBars, 800);
+
+    // Add floating animation to profile image
+    if (profileImage) {
+        profileImage.addEventListener('animationend', function() {
+            this.style.animation = 'float-gentle 3s ease-in-out infinite';
+        });
+    }
 });
+
+// Add custom animations via CSS
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    @keyframes pulse-glow {
+        0% { box-shadow: 0 0 0 rgba(0, 188, 212, 0.7); }
+        50% { box-shadow: 0 0 20px rgba(0, 188, 212, 0.7); }
+        100% { box-shadow: 0 0 0 rgba(0, 188, 212, 0.7); }
+    }
+    
+    @keyframes float-gentle {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-5px) scale(1); }
+    }
+`;
+document.head.appendChild(style);
