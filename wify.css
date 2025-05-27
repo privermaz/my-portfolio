@@ -1,44 +1,35 @@
-#btn {
-  position: relative;
-  font-size: 20px;
-  padding: 18px 48px;
-  border: 2px solid #00f7ff;
-  border-radius: 0;
-  background-color: transparent;
-  color: #00f7ff;
+#btn{
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(147, 51, 234, 0.4);
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 15px #00f7ff55;
 }
-
 #btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, #00f7ff, transparent);
-  animation: slide-glow 1.2s infinite linear;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-20deg);
+  transition: left 0.6s;
+}
+
+#btn:hover::before {
+  left: 100%;
 }
 
 #btn:hover {
-  background-color: #00f7ff;
-  color: #0f0c29;
-  box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(147, 51, 234, 0.6);
 }
-
-@keyframes slide-glow {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
