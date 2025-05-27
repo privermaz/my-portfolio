@@ -1,6 +1,3 @@
-document.getElementById('btn').addEventListener('click', function () {
-  window.location.href = 'portfolio.html';
-});
 document.addEventListener('DOMContentLoaded', function() {
     // Website opening animation
     const container = document.querySelector('.portfolio-container');
