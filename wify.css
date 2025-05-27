@@ -1,6 +1,6 @@
 /* styles.css */
 
-body {
+#button{
   margin: 0;
   height: 100vh;
   display: flex;
@@ -49,3 +49,5 @@ body {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+#go{
+font-size:
