@@ -1,54 +1,50 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   color: white;
   overflow-x: hidden;
   position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  background-image:url("https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=6835d809&is=68348689&hm=29b4f45c3364421f038f2d9629003e4ef1a6e4da3a6d33164f21d1cec3837d1a&");
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%),
+              url("https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=6835d809&is=68348689&hm=29b4f45c3364421f038f2d9629003e4ef1a6e4da3a6d33164f21d1cec3837d1a&") no-repeat center/cover fixed;
 }
 
+/* Container */
 .portfolio-container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 25px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 1;
   border: 1px solid rgba(255, 255, 255, 0.1);
   opacity: 0;
   transform: scale(0.8) translateY(20px);
-  display:flex;
-  justify-content:center;
-  align-content:center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  z-index: 1;
 }
 
+/* Profile Section */
 .profile-section {
   text-align: center;
 }
 
 .profile-image {
-  margin-bottom: 15px;
-  position: relative;
   width: 130px;
   height: 130px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 15px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 .profile-image img {
@@ -57,12 +53,10 @@ body {
   border-radius: 50%;
   border: 4px solid rgba(255, 255, 255, 0.3);
   object-fit: cover;
-  display: block;
-  box-shadow: 
-    0 0 30px rgba(255, 215, 0, 0.3),
-    0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Headings */
 h1 {
   font-size: 24px;
   margin-bottom: 5px;
@@ -71,6 +65,7 @@ h1 {
   gap: 8px;
 }
 
+/* Cards Shared Style */
 .about-card, .social-card, .skills-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 18px;
@@ -79,7 +74,6 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
-  position: relative;
 }
 
 .about-card:hover, .social-card:hover, .skills-card:hover {
@@ -87,6 +81,7 @@ h1 {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Card Header */
 .card-header {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -96,9 +91,7 @@ h1 {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 20px;
-  box-shadow: 
-    0 4px 15px rgba(102, 126, 234, 0.4),
-    0 0 20px rgba(118, 75, 162, 0.3);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4), 0 0 20px rgba(118, 75, 162, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -118,25 +111,18 @@ h1 {
   left: 100%;
 }
 
-.about-content {
+/* Text Content */
+.about-content, .social-status {
   text-align: left;
   line-height: 1.6;
 }
 
-.about-content p {
-  margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.social-status {
-  margin-bottom: 20px;
-}
-
-.social-status p {
+.about-content p, .social-status p {
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* Status Dots */
 .status-item {
   display: flex;
   align-items: center;
@@ -166,6 +152,7 @@ h1 {
   box-shadow: 0 0 10px #f44336;
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: space-around;
@@ -173,7 +160,6 @@ h1 {
 }
 
 .social-icon {
-  position: relative;
   font-size: 18px;
   padding: 12px;
   border-radius: 12px;
@@ -182,18 +168,17 @@ h1 {
   transition: transform 0.2s ease, background 0.2s ease;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .social-icon:hover {
   transform: translateY(-8px) scale(1.1);
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 
-    0 8px 25px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .social-icon i {
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
@@ -202,13 +187,14 @@ h1 {
 }
 
 .social-icon .status-dot {
+  width: 8px;
+  height: 8px;
   position: absolute;
   bottom: 5px;
   right: 5px;
-  width: 8px;
-  height: 8px;
 }
 
+/* Skills */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -249,8 +235,6 @@ h1 {
   font-weight: 500;
 }
 
-
-
 /* Responsive Design */
 @media screen and (max-width: 480px) {
   .portfolio-container {
@@ -274,7 +258,6 @@ h1 {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
