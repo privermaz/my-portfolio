@@ -283,15 +283,6 @@ h1 {
     max-width: 500px;
   }
 }
-body {
-  position: relative;
-  margin: 0;
-  min-height: 100vh;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-  z-index: 1;
-}
 body::before {
   content: "";
   position: fixed;
