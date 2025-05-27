@@ -10,7 +10,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.portfolio-btn {
+#btn{
   background: linear-gradient(135deg, #4f46e5, #9333ea);
   color: white;
   padding: 14px 28px;
@@ -25,7 +25,7 @@ body {
   overflow: hidden;
 }
 
-.portfolio-btn::before {
+#btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,11 +37,11 @@ body {
   transition: left 0.6s;
 }
 
-.portfolio-btn:hover::before {
+#btn:hover::before {
   left: 100%;
 }
 
-.portfolio-btn:hover {
+#btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 30px rgba(147, 51, 234, 0.6);
 }
