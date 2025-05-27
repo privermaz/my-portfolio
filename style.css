@@ -11,11 +11,10 @@ body {
   overflow-x: hidden;
   position: relative;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  background-image: url("https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=683680c9&is=68352f49&hm=b6fe308461cccc1fbd822531d234d88208315530bdaef543eb4f6fa66262ef16&");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position:center;
+  background-image:url("https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=6835d809&is=68348689&hm=29b4f45c3364421f038f2d9629003e4ef1a6e4da3a6d33164f21d1cec3837d1a&");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }
 
 .portfolio-container {
@@ -32,6 +31,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   opacity: 0;
   transform: scale(0.8) translateY(20px);
+  display:flex;
+  justify-content:center;
+  align-content:center;
 }
 
 .profile-section {
@@ -46,8 +48,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: center;
-  align-items: center; /* ensures vertical centering */
+  justify-content:center;
 }
 
 .profile-image img {
@@ -248,6 +249,8 @@ h1 {
   font-weight: 500;
 }
 
+
+
 /* Responsive Design */
 @media screen and (max-width: 480px) {
   .portfolio-container {
@@ -255,24 +258,30 @@ h1 {
     padding: 15px;
     max-width: none;
   }
+
   .profile-image img {
     width: 100px;
     height: 100px;
   }
+
   h1 {
     font-size: 20px;
   }
+
   .about-card, .social-card, .skills-card {
     padding: 15px;
     margin: 15px 0;
   }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
+
   .skill-item {
     padding: 15px;
   }
+
   .skill-item i {
     font-size: 28px;
   }
@@ -282,14 +291,4 @@ h1 {
   .portfolio-container {
     max-width: 500px;
   }
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  pointer-events: none; /* prevents interaction */
 }
