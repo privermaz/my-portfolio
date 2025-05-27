@@ -12,7 +12,7 @@ body {
   position: relative;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   background-image: url("https://cdn.discordapp.com/attachments/1368226175050186794/1376580544149852301/a5befa6d9244f0687fe32db5f0da8c5b.jpg?ex=683680c9&is=68352f49&hm=b6fe308461cccc1fbd822531d234d88208315530bdaef543eb4f6fa66262ef16&");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
