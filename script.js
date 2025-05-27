@@ -24,3 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200 + i * 50);
     });
 });
+window.addEventListener('click', () => {
+  const audio = document.getElementById('bg-music');
+  audio.play().catch(e => console.error('Playback error:', e));
+}, { once: true });
