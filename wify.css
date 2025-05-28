@@ -54,4 +54,13 @@ font-size:60px;
 margin-bottom:20px;
 }
 #heading{
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6); /* Blue to purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Poppins', sans-serif;
 }
