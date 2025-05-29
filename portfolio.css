@@ -265,7 +265,7 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.8rem;
+  gap: 1.4rem;
   margin: 2rem 0;
   flex-wrap: wrap;
 }
