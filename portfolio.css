@@ -232,79 +232,127 @@
             background-color: var(--darker);
             border-top: 1px solid rgba(0, 247, 255, 0.1);
         }
-        
-/* Social Links Container*/
+ /* ===== Social Links Container ===== */
 .social-links {
   display: flex;
   justify-content: center;
-  align-items: center; /* Ensures vertical alignment */
-  gap: 20px;
-  margin: 2rem 0;
-  padding: 0 1rem;
+  align-items: center;
+  gap: 1.8rem;
+  margin: 2.5rem 0;
+  padding: 0;
   width: 100%;
-  flex-wrap: nowrap; /* Prevents wrapping */
-  overflow-x: auto; /* Allows horizontal scrolling if needed */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  list-style: none;
+  flex-wrap: nowrap;
 }
 
-/* Individual Icons */
+/* ===== Individual Social Icons ===== */
 .social-icon {
-  flex: 0 0 auto; /* Prevents flex items from growing/shrinking */
-  display: inline-flex; /* Better for inline alignment */
+  /* Structure */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  /* Rest of your existing icon styles */
-  font-size:30px;
-  color:white;
-  border-radius:50%;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* Prevents distortion */
+  
+  /* Visual Style */
+  color: #e0e0e0;
+  font-size: 1.6rem;
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid rgba(0, 247, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  /* Interaction */
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .social-links {
-    gap: 1rem;
-    padding: 0 0.5rem;
-  }
-  .social-icon {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-/* Hover Effects */
+/* ===== Hover/Active States ===== */
 .social-icon:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 15px rgba(0, 247, 255, 0.2);
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 247, 255, 0.25);
   border-color: var(--primary);
 }
 
-/* Platform-Specific Colors */
-.social-icon[href*="github.com"]:hover {
-  color: #f5f5f5;
-  background: linear-gradient(135deg, #333, #6e5494);
+.social-icon:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
-.social-icon[href*="instagram.com"]:hover {
-  color: #fff;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+/* ===== Platform-Specific Colors ===== */
+/* GitHub */
+.social-icon[href*="github"]:hover {
+  color: white;
+  background: linear-gradient(135deg, #2b3137, #4a4a4a);
 }
 
-.social-icon[href*="discord.com"]:hover {
-  color: #fff;
-  background: linear-gradient(135deg, #5865F2, #404EED);
+/* Instagram */
+.social-icon[href*="instagram"]:hover {
+  background: linear-gradient(45deg, 
+    #f09433 0%, #e6683c 25%, 
+    #dc2743 50%, #cc2366 75%, 
+    #bc1888 100%);
 }
 
-.social-icon[href*="twitter.com"]:hover,
+/* Discord */
+.social-icon[href*="discord"]:hover {
+  color: white;
+  background: #5865F2;
+}
+
+/* Twitter/X */
+.social-icon[href*="twitter"]:hover,
 .social-icon[href*="x.com"]:hover {
-  color: #fff;
-  background: #000;
+  color: white;
+  background: #000000;
 }
 
-.social-icon[href^="mailto:"]:hover {
-  color: #fff;
-  background: linear-gradient(135deg, #EA4335, #FBBC05);
+/* Email */
+.social-icon[href^="mailto"]:hover {
+  color: white;
+  background: linear-gradient(135deg, #d44638, #e94b3e);
+}
+
+/* ===== Tooltips ===== */
+.social-icon::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--darker);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 247, 255, 0.3);
+}
+
+.social-icon:hover::after {
+  opacity: 1;
+  top: -45px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1.2rem;
+    padding: 0 10px;
+  }
+  
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
 }
 
 /* Tooltip Styling */
