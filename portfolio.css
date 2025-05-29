@@ -321,12 +321,11 @@
     background-position: center;
     background-size: contain;
     vertical-align: middle;
-    fill:#ffffff
+    
 }
 
 /* Platform-specific hover effect for X */
 .social-icon[href*="x.com"]:hover {
-    color: white;
     background: #000000;
 }
 
@@ -402,4 +401,7 @@
 .social-icon:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 3px;
+}
+.x-icon{
+fill:#ffffff
 }
