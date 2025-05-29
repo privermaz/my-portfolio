@@ -321,6 +321,7 @@
     background-position: center;
     background-size: contain;
     vertical-align: middle;
+    color:white;
 }
 
 /* Platform-specific hover effect for X */
