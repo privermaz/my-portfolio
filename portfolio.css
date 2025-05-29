@@ -327,32 +327,6 @@
 .social-icon[href*="x.com"]:hover {
     background: #000000;
 }
-
-/* ===== Tooltips ===== */
-.social-icon::after {
-  content: attr(aria-label);
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--darker);
-  color: var(--primary);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  border: 1px solid rgba(0, 247, 255, 0.3);
-}
-
-.social-icon:hover::after {
-  opacity: 1;
-  top: -45px;
-}
-
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 768px) {
   .social-links {
@@ -365,31 +339,6 @@
     height: 44px;
     font-size: 1.4rem;
   }
-}
-
-/* Tooltip Styling */
-.tooltip {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--darker);
-  color: var(--primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  white-space: nowrap;
-  font-weight: 600;
-  border: 1px solid rgba(0, 247, 255, 0.3);
-  text-decoration: none !important;
-}
-
-.social-icon:hover .tooltip {
-  opacity: 1;
-  top: -50px;
 }
 
 /* Active/Focus States */
