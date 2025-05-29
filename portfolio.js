@@ -1,5 +1,5 @@
 
-        const phrases = ["Full-Stack Developer", "Python Enthusiast", "UI/UX Designer", "Problem Solver"];
+        const phrases = ["Developer", "PyCoder", "UI/UX Designer", "Tech Enthusiast"];
         let i = 0;
         let j = 0;
         let currentPhrase = [];
